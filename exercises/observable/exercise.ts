@@ -1,6 +1,6 @@
-// Using code from example write debounce operator
+// Using code from example write delay operator
 
-function debounce(timeout) {
+function delay(timeout) {
     // TODO
 }
 

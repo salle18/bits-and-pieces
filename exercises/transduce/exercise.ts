@@ -5,8 +5,11 @@ const networkRequest2 = () => Promise.resolve(200);
 const networkRequest3 = () => Promise.resolve(300);
 
 
-[networkRequest1, networkRequest2, networkRequest3].reduce(/** TODO */);
+[networkRequest1, networkRequest2, networkRequest3].reduce((acc, next) => acc.then(next), Promise.resolve());
 
+[2,4,8].reduce((acc, next) => {
+    return [...acc, next, next * 3]
+}, []);
 
 // Using transducers from example sum all even numbers larger than 100
 
